@@ -6,39 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Calculadora</title>
     <link rel="icon" href="page-icon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .fundo{
+            background-color: #85cfe6;
+            height: 100vh;
+            color: white;
+
+        }
+        .calculadora{
+            position: absolute;
+            background-color: #f2f4f5;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .botao{
+            background-color:#6b7c8d;
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            border: none;
+            cursor: pointer;
+            color: white;
+            margin: 3px;
+        }
+        #clear{
+            background-color: #ee4135;
+        }
+        #clear:hover{
+            background-color: #cc392e;
+        }
+        .botao-function{
+            background-color:#4d5462;
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            font-family: 'Montserrat', sans-serif;
+            border: none;
+            cursor: pointer;
+            color: white;
+            margin: 3px;
+        }
+        .botao:hover{
+           background-color:#5c6772;
+        }
+        .botao-function:hover{
+            background-color: #272a31;
+        }
+        .fundo-result{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3px;
+        }
+        #resultado{
+            background-color: #c8cbc7;
+            width: 225px;
+            font-family: 'Montserrat', sans-serif;
+            height: 80px;
+            border: solid 4px #626977;
+            font-size: 45px;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    </style>
 </head>
 <body>
     <div class="fundo">
         <div class="calculadora">
-            <p id="resultado">resultado</p>
+            <div class="fundo-result">
+                <p id="resultado"></p>
+            </div>
             <table>
                 <tr>
-                    <td><button class="botao">C</button></td>
-                    <td><button class="botao"><</button></td>
-                    <td><button class="botao">/</button></td>
-                    <td><button class="botao">x</button></td>
+                    <td><button class="botao" id="clear">C</button></td>
+                    <td><button class="botao-function"><</button></td>
+                    <td><button class="botao-function">/</button></td>
+                    <td><button class="botao-function">x</button></td>
                 </tr>
                 <tr>
                     <td><button class="botao">7</button></td>
                     <td><button class="botao">8</button></td>
                     <td><button class="botao">9</button></td>
-                    <td><button class="botao">-</button></td>
+                    <td><button class="botao-function">-</button></td>
                 </tr>
                 <tr>
                     <td><button class="botao">4</button></td>
                     <td><button class="botao">5</button></td>
                     <td><button class="botao">6</button></td>
-                    <td><button class="botao">+</button></td>
+                    <td><button class="botao-function">+</button></td>
                 </tr>
                 <tr>
                     <td><button class="botao">1</button></td>
                     <td><button class="botao">2</button></td>
                     <td><button class="botao">3</button></td>
-                    <td rowspan="2"><button class="botao">=</button></td>
+                    <td rowspan="2"><button class="botao-function" style="height: 108px;">=</button></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button class="botao">0</button></td>
-                    <td><button class="botao">.</button></td>
+                    <td colspan="2"><button class="botao" style="width: 108px;">0</button></td>
+                    <td><button class="botao-function">.</button></td>
                 </tr>
             </table>
         </div>
